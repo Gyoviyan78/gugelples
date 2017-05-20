@@ -38,6 +38,12 @@ public class ez {
         lingk.put("Teman", TemanCircle);
         lingk.put("Musik", MusikCircle);
         lingk.put("Teknologi", TeknologiCircle);
+         
+         ArrayList<ArrayList<InfoPribadi>> plus = new ArrayList<>();
+        Scanner input = new Scanner(System.in);
+        //Menu Tampilan dibawah ini----------------------------------------------------------
+        int stop = 0, tambahan = 1;
+        String nama, nomor, alamat, email, jeniskelamin;
         
         do {
             int tes=0;
