@@ -32,7 +32,7 @@ public class ez {
         temp.add(new InfoPribadi("Gyoviyan", "0852134091283", "geo.sama7@gmail.com", "jalan anu", "cow"));
         temp.add(new InfoPribadi("riantu", "0871230981231", "riantu34@gmail.com", "jalan ini", "pria"));
         TeknologiCircle.add(temp);
-        //Hashmap
+       
         HashMap<String, ArrayList<ArrayList<InfoPribadi>>> lingk = new HashMap<>();
         lingk.put("Game", GameCircle);
         lingk.put("Teman", TemanCircle);
@@ -41,7 +41,7 @@ public class ez {
          
          ArrayList<ArrayList<InfoPribadi>> plus = new ArrayList<>();
         Scanner input = new Scanner(System.in);
-        //Menu Tampilan dibawah ini----------------------------------------------------------
+        
         int stop = 0, tambahan = 1;
         String nama, nomor, alamat, email, jeniskelamin;
         
@@ -54,7 +54,7 @@ public class ez {
             for (String a : lingk.keySet()) {
                 System.out.println((++i) + ". " + a + " ");
             }
-            System.out.println("======\n1. tambah Lingkaran (beta)\n2. Tampilkan Lingkaran");
+            System.out.println("======\n1. tambah Lingkaran (beta)\n2. Tampilkan Lingkaran\n3.keluar");
             System.out.println("Pilihan: ");
             int pil = input.nextInt();
             input.nextLine();
@@ -83,7 +83,7 @@ public class ez {
                         }
                         
                     }
-                    System.out.println("======\n1. Tambah Profil\n2. Lihat Profil");
+                    System.out.println("======\n1. Tambah Profil\n2. Lihat Prof\n3.keluar");
                     pil = input.nextInt();
                     input.nextLine();
                     switch (pil) {
@@ -110,8 +110,7 @@ public class ez {
                                         System.out.println("Email: " + lingk.get(pili).get(0).get(j).getEmail());
                                         System.out.println("Alamat: " + lingk.get(pili).get(0).get(j).getAlamat());
                                         System.out.println("Jenis Kelamin: " + lingk.get(pili).get(0).get(j).getJenisKelamin());
-                                    } else {
-                                    }
+                                    } 
                                 }
                             } catch (IndexOutOfBoundsException w) {
 
@@ -121,7 +120,6 @@ public class ez {
                             stop=1;
                             break;
                     }
-//                System.out.println(lingk.get(pili).get(0).get(0).getNama());
                     break;
                 default:
                     stop=1;
