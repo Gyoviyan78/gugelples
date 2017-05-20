@@ -60,8 +60,15 @@ public class ez {
             input.nextLine();
             switch (pil) {
                 case 1://Tambah Circle------------------------------------------------------------
-                    
-                    break;
+                     System.out.print("Masukkan nama: ");nama=input.nextLine();
+                     System.out.print("Masukkan nomor: ");nomor=input.nextLine();
+                     System.out.print("Masukkan email: ");email=input.nextLine();
+                     System.out.print("Masukkan alamat: ");alamat=input.nextLine();
+                     System.out.print("Masukkan jenis kelamin: ");jeniskelamin=input.nextLine();
+                     temp = new ArrayList<>();
+                     temp.add(new InfoPribadi(nama, nomor, email, alamat, jeniskelamin));
+                     plus.add(temp);
+                     break;
                 case 2://tampilkan Lingkaran------------------------------------------------------
                     System.out.print("Lingkaran: ");//Case Sensitive
                     String pili = input.next();
