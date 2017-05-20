@@ -1,0 +1,36 @@
+package gluglu;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class ez {
+
+    public static void main(String[] args) {
+        ArrayList<ArrayList<InfoPribadi>> GameCircle = new ArrayList<>();
+        ArrayList<ArrayList<InfoPribadi>> TemanCircle = new ArrayList<>();
+        ArrayList<ArrayList<InfoPribadi>> MusikCircle = new ArrayList<>();
+        ArrayList<ArrayList<InfoPribadi>> TeknologiCircle = new ArrayList<>();
+
+        ArrayList<InfoPribadi> temp = new ArrayList<>();
+        temp.add(new InfoPribadi("Gyoviyan", "085213409128", "geo,sama7@gmail.com", "jalan anu", "cowok"));
+        temp.add(new InfoPribadi("Iqbal", "083981239817", "iqbaladitama91@gmail.com", "jalan itu", "laki laki"));
+        GameCircle.add(temp);
+
+
+        temp = new ArrayList<>();
+        temp.add(new InfoPribadi("Gyoviyan", "0852134091283", "geo,sama7@gmail.com", "jalan anu", "cowok"));
+        temp.add(new InfoPribadi("Iqbal", "0839812398172", "iqbaladitama91@gmail.com", "jalan itu", "laki laki"));
+        temp.add(new InfoPribadi("riantu", "0871230981231", "riantu34@gmail.com", "jalan ini", "pria"));
+        TemanCircle.add(temp);
+
+
+        temp = new ArrayList<>();
+        temp.add(new InfoPribadi("Iqbal", "0839812398172", "iqbaladitama91@gmail.com", "jalan itu", "laki laki"));
+        temp.add(new InfoPribadi("riantu", "0871230981231", "riantu34@gmail.com", "jalan ini", "pria"));
+        MusikCircle.add(temp);
+
+        temp = new ArrayList<>();
+        temp.add(new InfoPribadi("Gyoviyan", "0852134091283", "geo,sama7@gmail.com", "jalan anu", "cow"));
+        temp.add(new InfoPribadi("riantu", "0871230981231", "riantu34@gmail.com", "jalan ini", "pria"));
+        TeknologiCircle.add(temp);
