@@ -13,17 +13,15 @@ public class ez {
         ArrayList<ArrayList<InfoPribadi>> TeknologiCircle = new ArrayList<>();
 
         ArrayList<InfoPribadi> temp = new ArrayList<>();
-        temp.add(new InfoPribadi("Gyoviyan", "085213409128", "geo,sama7@gmail.com", "jalan anu", "cowok"));
+        temp.add(new InfoPribadi("Gyoviyan", "085213409128", "geo.sama7@gmail.com", "jalan anu", "cowok"));
         temp.add(new InfoPribadi("Iqbal", "083981239817", "iqbaladitama91@gmail.com", "jalan itu", "laki laki"));
         GameCircle.add(temp);
 
-
         temp = new ArrayList<>();
-        temp.add(new InfoPribadi("Gyoviyan", "0852134091283", "geo,sama7@gmail.com", "jalan anu", "cowok"));
+        temp.add(new InfoPribadi("Gyoviyan", "0852134091283", "geo.sama7@gmail.com", "jalan anu", "cowok"));
         temp.add(new InfoPribadi("Iqbal", "0839812398172", "iqbaladitama91@gmail.com", "jalan itu", "laki laki"));
         temp.add(new InfoPribadi("riantu", "0871230981231", "riantu34@gmail.com", "jalan ini", "pria"));
         TemanCircle.add(temp);
-
 
         temp = new ArrayList<>();
         temp.add(new InfoPribadi("Iqbal", "0839812398172", "iqbaladitama91@gmail.com", "jalan itu", "laki laki"));
@@ -31,6 +29,84 @@ public class ez {
         MusikCircle.add(temp);
 
         temp = new ArrayList<>();
-        temp.add(new InfoPribadi("Gyoviyan", "0852134091283", "geo,sama7@gmail.com", "jalan anu", "cow"));
+        temp.add(new InfoPribadi("Gyoviyan", "0852134091283", "geo.sama7@gmail.com", "jalan anu", "cow"));
         temp.add(new InfoPribadi("riantu", "0871230981231", "riantu34@gmail.com", "jalan ini", "pria"));
         TeknologiCircle.add(temp);
+        //Hashmap
+        HashMap<String, ArrayList<ArrayList<InfoPribadi>>> lingk = new HashMap<>();
+        lingk.put("Game", GameCircle);
+        lingk.put("Teman", TemanCircle);
+        lingk.put("Musik", MusikCircle);
+        lingk.put("Teknologi", TeknologiCircle);
+        
+        do {
+            int tes=0;
+            System.out.println("GOOGLE+\n=======");
+            System.out.println("Lingkaran Anda:");
+            int i = 0;
+
+            for (String a : lingk.keySet()) {
+                System.out.println((++i) + ". " + a + " ");
+            }
+            System.out.println("======\n1. tambah Lingkaran (beta)\n2. Tampilkan Lingkaran");
+            System.out.println("Pilihan: ");
+            int pil = input.nextInt();
+            input.nextLine();
+            switch (pil) {
+                case 1://Tambah Circle------------------------------------------------------------
+                    
+                    break;
+                case 2://tampilkan Lingkaran------------------------------------------------------
+                    System.out.print("Lingkaran: ");//Case Sensitive
+                    String pili = input.next();
+                    try {
+                        for (int j = 0; j >= 0; j++) {
+                            System.out.println(j + ". " + lingk.get(pili).get(0).get(j).getNama());
+                            tes++;
+                        }
+                    } catch (Exception a) {
+                        if (tes==0) {
+                            System.out.println("Lingkaran Kosong");
+                        }
+                        
+                    }
+                    System.out.println("======\n1. Tambah Profil\n2. Lihat Profil");
+                    pil = input.nextInt();
+                    input.nextLine();
+                    switch (pil) {
+                        case 1://Tambah Profil--------------------------------------------------------
+                            
+                            break;
+                        case 2://Lihat Profil--------------------------------------------------------
+                            System.out.print("pilih: ");//Case Sensitive
+                            String pilih = input.nextLine();
+                            try {
+                                for (int j = 0; j >= 0; j++) {
+                                    String cmp = lingk.get(pili).get(0).get(j).getNama();
+                                    if (pilih == null ? cmp == null : pilih.equals(cmp)) {
+                                        System.out.println("=============");
+                                        System.out.println("Nama: " + lingk.get(pili).get(0).get(j).getNama());
+                                        System.out.println("Nomor: " + lingk.get(pili).get(0).get(j).getNomor());
+                                        System.out.println("Email: " + lingk.get(pili).get(0).get(j).getEmail());
+                                        System.out.println("Alamat: " + lingk.get(pili).get(0).get(j).getAlamat());
+                                        System.out.println("Jenis Kelamin: " + lingk.get(pili).get(0).get(j).getJenisKelamin());
+                                    } else {
+                                    }
+                                }
+                            } catch (IndexOutOfBoundsException w) {
+
+                            }
+                            break;
+                        default:
+                            stop=1;
+                            break;
+                    }
+//                System.out.println(lingk.get(pili).get(0).get(0).getNama());
+                    break;
+                default:
+                    stop=1;
+                    break;
+            }
+        } while (stop != 1);
+    }
+}
